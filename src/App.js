@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import "./App.css"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from '../src/components/navabr/Navbar.js'
+import HomePage from './components/homePage/HomePage.js';
+import Footer from './components/footer/Footer.js';
+import Exchange from  './components/exchange/Exchange.js'
+import Cryptocurrencies from './components/cryptocurrencies/Cryptocurrencies.js';
+import CryptoDetails from './components/cryptoDetails/CryptoDetails.js';
+import News from './components/news/News.js';
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <Navbar/>
+      <Routes>
+        <Route exact path="/" element={<HomePage />} />
+        <Route exact path="/exchange" element={<Exchange />} />
+        <Route exact path="/cryptocurrencies" element={<Cryptocurrencies />} />
+        <Route exact path="/coin/:uuid" element={<CryptoDetails/>} />
+        <Route exact path="/news" element={<News />} />
+      </Routes>
+      <Footer />
+      </BrowserRouter>
+   
+
+  )
 }
 
-export default App;
+export default App
