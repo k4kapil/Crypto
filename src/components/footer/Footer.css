@@ -1,0 +1,48 @@
+.footer {
+    background-color: #2b73e6;
+    padding: 50px 0;
+}
+.menuItems {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    
+}
+
+.infoText {
+    color: #fff;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 20px;
+    
+}
+.socialIcons {
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+   
+}
+.img {
+    width: 30px;
+    height: 30px;
+   
+  
+}
+.Playstore .bn45 {
+    position: relative;
+    width: 170px;
+    height: 50px; /* Positioning context for the image */
+  }
+
+  .Playstore .bn46 {
+    position: relative;
+    width: 150px;
+    height: 50px; /* Positioning context for the image */
+  }
+  
